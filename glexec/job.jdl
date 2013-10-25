@@ -1,0 +1,9 @@
+[
+Executable = "job.sh";
+InputSandbox = {"job.sh"};
+OutputSandbox = {"std.out", "std.err"};
+StdOutput = "std.out";
+StdError = "std.err";
+OutputSandboxBaseDestUri = "gsiftp://localhost";
+]
+
