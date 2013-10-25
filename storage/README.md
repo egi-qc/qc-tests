@@ -17,11 +17,11 @@ Execute tests with a SRM client that:
 
 ## How to test
 
-Sample test using the StoRM SRM client is available at srm subdirectory
+See srm-test.sh for a sample test suite using the StoRM SRM client.
 
 # lcg-utils test
 
-Perform various operations using the lcg-* commands that use the SRM interface.
+Perform various operations using the lcg-utils commands that use the SRM interface.
 
 ## How to test
 
