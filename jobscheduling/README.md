@@ -27,14 +27,14 @@ Any information needed for performing scheduling of jobs is expected to be disco
 ### How to test
 * (If supported) Perform a list-match for jobs with no requirements. This should return a list with all available resources.
 * Submit simple jobs (e.g. sleep for a couple of minutes) to the Job Scheduling Appliance and check:
-** the jobs are correctly executed in the execution appliance (CE)
-** the status of the job is retrieved correctly and in a timely manner (i.e. status may not be updated in real-time, but it should be available within a short period of time)
-** cancelling jobs in the Appliance removes the job in the underlying system
+  * the jobs are correctly executed in the execution appliance (CE)
+  * the status of the job is retrieved correctly and in a timely manner (i.e. status may not be updated in real-time, but it should be available within a short period of time)
+  * cancelling jobs in the Appliance removes the job in the underlying system
 * Submit jobs with some input/output files and assure that the files are correctly transferred.
 * If the appliance supports it, submit:
-** DAG jobs
-** Parametric jobs
-** Job Collections
+  * DAG jobs
+  * Parametric jobs
+  * Job Collections
 
 See subdirs for sample jobs.
 
@@ -43,6 +43,8 @@ Job Scheduling Appliances should also support multi-node/-core jobs. Check the J
 
 ## WMS
 
+For WMS check:
+* Proxy renewal features work (submit a long job with a short renewable proxy and assure that it ends)
+* Multiple role/group proxy is supported
+* Proxies with long chains should be supported (such as the ones created by myproxy C=[...]/CN=proxy/CN=proxy/CN=proxy/...)
 
-### Proxy renewal
-long proxy - proxy renewal - multiple role/group proxy support
