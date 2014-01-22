@@ -3,7 +3,7 @@
 #JOBMANAGER=jobmanager
 
 
-HOST=test27.egi.cesga.es
+HOST=`hostname -f`
 PBS=0
 JOBMANAGER=$1
 echo $JOBMANAGER | grep pbs > /dev/null
@@ -26,7 +26,7 @@ cat > job1.rsl << EOF
 &
 (executable=/bin/ls)
 (arguments=-l)
-(file_stage_in = (\$(GLOBUSRUN_GASS_URL) # "/home/enol/myfile" afile))
+(file_stage_in = (\$(GLOBUSRUN_GASS_URL) # "$PWD/myfile" afile))
 EOF
 seq $RANDOM > myfile
 echo "ls -l myfile"
